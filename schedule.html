@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> Schedule - Victor Azula. </title>
+	<meta name="description" content="Information Technology">
+    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    	<meta name="author" content="GR8">
+    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <script>
+  
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script> 
+    
+</head>
+<body oncontextmenu="alert('Created by Victor Azula.');return false;" onselectstart="return false" ondragstart="return false" style="background-color: rgb(255,255,255);">
+<br>
+<div class="container" style="font-size: 150%;">
+    <br>
+	<div   style="text-align:center"> <h1 style="color: darkblue;"> 
+        IT Security class schedule up to April 2 2021.  </h1> </div>
+    <br>
+    <hr>
+
+<table class="table table-hover table-striped table-bordered">
+<tr><th>Course </th><th>		Start Date</th></tr>
+<tr><td>CompTIA A+ Part I</td><td>	11/16/2020</td></tr>
+<tr><td>TBD (ask Emilio)	</td><td>11/23/2020</td></tr>
+<tr><td>CompTIA A+ Part II	</td><td>11/30/2020</td></tr>
+<tr><td>TBD (ask Emilio)	</td><td>12/7/2020</td></tr>
+<tr><td>CompTIA Network+	</td><td>12/14/2020</td></tr>
+<tr><td>TBD (ask Emilio)	</td><td>12/21/2020</td></tr>
+<tr><td>CompTIA Security+	</td><td>12/28/2020</td></tr>
+<tr><td>TBD (ask Emilio)	</td><td>1/4/2021</td></tr>
+<tr><td>Cisco 	CCNA 200-301 Part I	</td><td>1/11/2021</td></tr>
+<tr><td>TBD (ask Emilio)	</td><td>1/18/2021</td></tr>
+<tr><td>Cisco 	CCNA 200-301 Part II	</td><td>1/25/2021</td></tr>
+<tr><td>TBD (ask Emilio)	</td><td>02/01/2021</td></tr>
+<tr><td>CEH	Certified Ethical Hacker Part I </td><td>2/8/2021</td></tr>
+<tr><td>TBD (ask Emilio)	</td><td>2/22/2021</td></tr>
+<tr><td>CEH	Certified Ethical Hacker Part II</td><td> 3/1/2021</td></tr>
+<tr><td>	TBD (ask Emilio)</td><td>	3/8/2021</td></tr>
+<tr><td>	CISSP	Certified Information Systems Security Professional Part I  </td><td>3/15/2021</td></tr>
+<tr><td>	TBD (ask Emilio)</td><td>	3/22/2021</td></tr>
+<tr><td>CISSP	Certified Information Systems Security Professional Part II  </td><td>3/29/2021</td></tr>
+</table>
+</div>
+
+<br>
+    
+
+    
+
+ <img src="https://windows2045.github.io/calendar-5620762.svg" class="img-fluid d-block mx-auto">   
+<!-- These Javascript links are required for the proper functionality of Bootstrap 4. 
+And they should always be placed at the very end, near to the closing body tag. Exactly where they are right now. -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
