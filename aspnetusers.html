@@ -1,0 +1,103 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> T-SQL script </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+ <br> 
+
+-- 1. Create AspNetRoles Table <br>  
+CREATE TABLE [dbo].[AspNetRoles] ( <br>  
+[Id] [nvarchar](450) NOT NULL, <br>  
+[Name] [nvarchar](256) NULL, <br>  
+[NormalizedName] [nvarchar](256) NULL, <br>  
+[ConcurrencyStamp] [nvarchar](max) NULL, <br>  
+CONSTRAINT [PK_AspNetRoles] PRIMARY KEY CLUSTERED ([Id] ASC) <br>  
+); <br>  
+-- 2. Create AspNetUsers Table <br>  
+CREATE TABLE [dbo].[AspNetUsers] ( <br>  
+[Id] [nvarchar](450) NOT NULL, <br>  
+[UserName] [nvarchar](256) NULL, <br>  
+[NormalizedUserName] [nvarchar](256) NULL, <br>  
+[Email] [nvarchar](256) NULL, <br>  
+[NormalizedEmail] [nvarchar](256) NULL, <br>  
+[EmailConfirmed] [bit] NOT NULL, <br>  
+[PasswordHash] [nvarchar](max) NULL, <br>  
+[SecurityStamp] [nvarchar](max) NULL, <br>  
+[ConcurrencyStamp] [nvarchar](max) NULL, <br>  
+[PhoneNumber] [nvarchar](max) NULL, <br>  
+[PhoneNumberConfirmed] [bit] NOT NULL, <br>  
+[TwoFactorEnabled] [bit] NOT NULL, <br>  
+[LockoutEnd] [datetimeoffset](7) NULL, <br>  
+[LockoutEnabled] [bit] NOT NULL, <br>  
+[AccessFailedCount] [int] NOT NULL, <br>  
+CONSTRAINT [PK_AspNetUsers] PRIMARY KEY CLUSTERED ([Id] ASC) <br>  
+); <br>  
+-- 3. Create AspNetRoleClaims Table <br>  
+CREATE TABLE [dbo].[AspNetRoleClaims] ( <br>  
+[Id] [int] IDENTITY(1,1) NOT NULL, <br>  
+[RoleId] [nvarchar](450) NOT NULL, <br>  
+[ClaimType] [nvarchar](max) NULL, <br>  
+[ClaimValue] [nvarchar](max) NULL, <br>  
+CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY CLUSTERED ([Id] ASC), <br>  
+CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId])  <br>  
+REFERENCES [dbo].[AspNetRoles] ([Id]) ON DELETE CASCADE <br>  
+); <br>  
+-- 4. Create AspNetUserClaims Table <br>  
+CREATE TABLE [dbo].[AspNetUserClaims] ( <br>  
+[Id] [int] IDENTITY(1,1) NOT NULL, <br>  
+[UserId] [nvarchar](450) NOT NULL, <br>  
+[ClaimType] [nvarchar](max) NULL, <br>  
+[ClaimValue] [nvarchar](max) NULL, <br>  
+CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY CLUSTERED ([Id] ASC), <br>  
+CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId])  <br>  
+REFERENCES [dbo].[AspNetUsers] ([Id]) ON DELETE CASCADE <br>  
+); <br>  
+-- 5. Create AspNetUserLogins Table <br>  
+CREATE TABLE [dbo].[AspNetUserLogins] ( <br>  
+[LoginProvider] [nvarchar](450) NOT NULL, <br>  
+[ProviderKey] [nvarchar](450) NOT NULL, <br>  
+[ProviderDisplayName] [nvarchar](max) NULL, <br>  
+[UserId] [nvarchar](450) NOT NULL, <br>  
+CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY CLUSTERED ([LoginProvider] ASC, [ProviderKey] ASC), <br>  
+CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId])  <br>  
+REFERENCES [dbo].[AspNetUsers] ([Id]) ON DELETE CASCADE <br>  
+); <br>  
+-- 6. Create AspNetUserRoles Table <br>  
+CREATE TABLE [dbo].[AspNetUserRoles] ( <br>  
+[UserId] [nvarchar](450) NOT NULL, <br>  
+[RoleId] [nvarchar](450) NOT NULL, <br>  
+CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY CLUSTERED ([UserId] ASC, [RoleId] ASC), <br>  
+CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId])  <br>  
+REFERENCES [dbo].[AspNetRoles] ([Id]) ON DELETE CASCADE, <br>  
+CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId])  <br>  
+REFERENCES [dbo].[AspNetUsers] ([Id]) ON DELETE CASCADE <br>  
+); <br>  
+-- 7. Create AspNetUserTokens Table <br>  
+CREATE TABLE [dbo].[AspNetUserTokens] ( <br>  
+[UserId] [nvarchar](450) NOT NULL, <br>  
+[LoginProvider] [nvarchar](450) NOT NULL, <br>  
+[Name] [nvarchar](450) NOT NULL, <br>  
+[Value] [nvarchar](max) NULL, <br>  
+CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY CLUSTERED ([UserId] ASC, [LoginProvider] ASC, [Name] ASC), <br>  
+CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId])  <br>  
+REFERENCES [dbo].[AspNetUsers] ([Id]) ON DELETE CASCADE <br>  
+); <br>  
+ 
+
+
+
+	
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+	
