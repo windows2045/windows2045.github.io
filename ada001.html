@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>City Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: white;
+            color: #777;
+            margin: 20px;
+        }
+        .header {
+            font-size: 36px;
+            font-weight: bold;
+            color: #999;
+        }
+        .menu span {
+            margin-right: 20px;
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .small-text {
+            font-size: 11px;
+        }
+        .fake-button {
+            background: #ccc;
+            padding: 8px 12px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container text-center">
+
+    
+    
+    <div class="header">City Services Portal</div>
+
+    
+    <div class="menu">
+        <span onclick="location.href='#services'">Services</span>
+        <span onclick="location.href='#contact'">Contact</span>
+        <span onclick="location.href='#apply'">Apply</span>
+    </div>
+
+    
+    <h3 id="services">Available Services</h3>
+
+    
+    <p class="small-text">Use this page to apply for permits, report issues, and contact the city.</p>
+
+    
+    <img src="floorplan.jpg" width="500" height="180">
+
+    
+    <p>To learn more about city programs, <a href="https://lacity.gov/myla311">click here</a>.</p>
+
+    <h3 id="apply">Application Form</h3>
+
+    
+    <form>
+        <input type="text" placeholder="Name"><br>
+        <input type="email" placeholder="Email"><br>
+
+        
+        <input type="text" placeholder="Permit Number">
+        <div style="color:red;">Permit number is required.</div>
+
+        
+        <div class="fake-button" onclick="alert('Submitted')">Submit Application</div>
+    </form>
+
+    <h3 id="contact">Contact</h3>
+    <p>Phone: 555-555-5555</p>
+	
+
+</div>
+
+</body>
+</html>
