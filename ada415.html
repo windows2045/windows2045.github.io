@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADA Issues Corrected</title>
+  <style>
+    body { font-family: Arial, sans-serif; color: #222; background: #fff; line-height: 1.5; font-size: 16px; }
+    .skip-link { position: absolute; left: -999px; top: 0; background: #000; color: #fff; padding: 8px; }
+    .skip-link:focus { left: 10px; top: 10px; }
+    a:focus, button:focus, input:focus, select:focus { outline: 3px solid #005fcc; outline-offset: 2px; }
+    .error { color: #b00020; font-weight: bold; }
+    .required::after { content: " *"; color: #b00020; }
+    table { border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #555; padding: 8px; }
+    .modal { display:none; border:1px solid #000; padding:15px; background:#fff; max-width:400px; }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container text-center">
+  <!-- Fix 1: Added lang="en" to html element -->
+  <!-- Fix 2: Added skip link -->
+  <!-- Fix 3: Improved text color contrast -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <main id="main-content">
+    <!-- Fix 4: Used real h1 heading -->
+    <h1>City Services Request Form</h1>
+
+    <!-- Fix 5: Added meaningful alt text -->
+    <img src="cityhall.png" alt="Front entrance of City Hall">
+
+    <!-- Fix 6: Used readable default text size -->
+    <p>Please complete this form to request city services.</p>
+
+    <!-- Fix 7: Used descriptive link text -->
+    <p><a href="#service-info">Learn more about city service requests</a></p>
+
+    <!-- Fix 8: Replaced clickable div with real button -->
+    <button type="button" onclick="alert('Submitted')">Submit Request</button>
+
+    <form aria-describedby="form-instructions">
+      <p id="form-instructions">Fields marked with an asterisk (*) are required.</p>
+
+      <!-- Fix 9: Added explicit label -->
+      <label for="name" class="required">Name</label>
+      <input type="text" id="name" name="name" required aria-describedby="name-error">
+      <!-- Fix 11: Associated error with field -->
+      <p id="name-error" class="error">Name is required.</p>
+
+      <!-- Fix 10: Added label and correct email input type -->
+      <label for="email" class="required">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <!-- Fix 12: Added visible label instead of relying only on placeholder -->
+      <label for="phone">Phone number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Example: 555-123-4567">
+
+      <!-- Fix 13: Added label for select -->
+      <label for="department" class="required">Department</label>
+      <select id="department" name="department" required>
+        <option value="">Choose one</option>
+        <option value="public-works">Public Works</option>
+        <option value="transportation">Transportation</option>
+      </select>
+
+      <!-- Fix 14: Added table caption and header cells -->
+      <table>
+        <caption>City service office hours</caption>
+        <thead>
+          <tr><th scope="col">Day</th><th scope="col">Hours</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Monday</td><td>8 AM - 5 PM</td></tr>
+          <tr><td>Tuesday</td><td>8 AM - 5 PM</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Fix 15: Added captions and transcript link for video -->
+      <video controls src="announcement.mp4">
+        <track kind="captions" src="announcement-captions.vtt" srclang="en" label="English captions" default>
+      </video>
+      <p><a href="announcement-transcript.html">Read the video transcript</a></p>
+
+      <!-- Fix 16: Added transcript for audio -->
+      <audio controls src="notice.mp3"></audio>
+      <p><a href="notice-transcript.html">Read the audio transcript</a></p>
+
+      <!-- Fix 17: Added aria-live for dynamic status messages -->
+      <div id="status" aria-live="polite"></div>
+
+      <!-- Fix 18: Does not rely on color alone -->
+      <p><strong>Required fields are marked with an asterisk (*) and highlighted in red.</strong></p>
+
+      <!-- Fix 19: Added proper checkbox label -->
+      <input type="checkbox" id="agree" name="agree" required>
+      <label for="agree" class="required">I agree to the terms</label>
+
+      <!-- Fix 20: Added accessible modal role, label, and descriptive close text -->
+      <button type="button" onclick="openModal()">Open Help</button>
+      <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <h2 id="modal-title">Help information</h2>
+        <p>This form lets you submit a city services request.</p>
+        <button type="button" onclick="closeModal()">Close help dialog</button>
+      </div>
+    </form>
+  </main>
+
+  <section id="service-info">
+    <h2>About city service requests</h2>
+    <p>Use this form to contact the appropriate city department.</p>
+  </section>
+
+  <script>
+    const modal = document.getElementById('modal');
+    function openModal() {
+      modal.style.display = 'block';
+      modal.querySelector('button').focus();
+    }
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+  </script>
+  </div>
+</body>
+</html>
