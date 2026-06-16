@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ADA Issues</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .tiny { font-size: 8px; }
+    .underlined { text-decoration: underline; }
+    .justified { text-align: justify; }
+    .low-contrast { color: #cccccc; background: #ffffff; }
+    table.layout td { padding: 12px; }
+    .fake-heading { font-size: 28px; font-weight: bold; }
+  </style>
+  <script>
+    function jumpMenu(sel) {
+      location.href = sel.value;
+    }
+    function mouseOnly() {
+      alert('Mouse-only action');
+    }
+  </script>
+  <link href="https://jsdelivr.net" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+  
+  <div class="class0007">Welcome to the Sample Page</div> 
+  
+  <h2></h2>
+
+  
+  <h4>Services</h4>
+
+  
+  <p class="tiny">This text is very small and difficult to read.</p>
+
+  
+  <p class="underlined">This underlined text looks like a link but is not clickable.</p>
+
+  
+  <p class="justified">This paragraph is justified, which can create uneven spacing between words and make the text harder to read for some users with cognitive or visual disabilities.</p>
+
+  
+  <p class="low-contrast">This paragraph has very low contrast.</p>
+
+  
+ 
+
+  
+  <img src="https://windows2045.github.io/cityhall.png" alt="This is an extremely long alternative text description that keeps going and going with unnecessary detail that should not be included in an image alt attribute because it is verbose and not helpful for screen reader users.">
+
+  
+ 
+
+  
+  <a href="https://example.com" title="Example website">Example website</a>
+
+  
+  <p><a href="https://example.com/report">Click here</a></p>
+
+  
+  <p><a href="https://example.com/contact">Contact us</a> <a href="https://example.com/contact">Contact us</a></p>
+
+  
+  <p><a href="annualreport.pdf">Annual Report</a></p>
+
+   
+
+  
+  <a href="https://example.com/empty"></a>
+
+  
+  <p><a href="#missing-section">Go to missing section</a></p>
+
+  
+  <p><a href="#maincontent">Skip to main content</a></p>
+
+  
+  <button aria-describedby="missing-description">Help</button>
+
+  
+  <button></button>
+
+  
+  <select>
+    <option>Choose one</option>
+    <option>Option A</option>
+  </select>
+
+  
+  <input type="text" name="firstName">
+
+  
+  <label for="lastName">Last Name</label>
+
+  
+  <input type="email" title="Email address">
+
+  
+  <div onclick="mouseOnly()">Click this mouse-only area</div>
+
+  
+  <div onmouseover="mouseOnly()">Hover over this text</div>
+
+  
+  <select onchange="jumpMenu(this)">
+    <option value="">Jump to...</option>
+    <option value="https://example.com/page1">Page 1</option>
+  </select>
+
+  
+  <video width="320" height="240" controls>
+    <source src="announcement.mp4" type="video/mp4">
+  </video>
+
+  <audio controls>
+    <source src="notice.mp3" type="audio/mpeg">
+  </audio>
+
+  
+  <iframe width="320" height="180" src="https://www.youtube.com/watch?v=5Hcol9r9V_I"></iframe>
+
+  
+  <noscript>This site requires JavaScript.</noscript>
+
+  
+  <a href="https://example.com/search" accesskey="s">Search</a>
+
+  
+  <table class="layout">
+    <tr><td>Navigation</td><td>Content</td></tr>
+  </table>
+
+  
+  <a href="https://example.com/tab" tabindex="5">Tab order problem</a>
+
+</body>
+</html>
