@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="All good here.">
+    <meta name="author" content="Victor">
+
+
+    <title> SQL Queries.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<style>
+		body { font-size: 20px; }
+	</style>
+</head>
+
+<body>
+<br>
+<div class="container    d-grid gap-5">
+
+
+<h1>250 Northwind MySQL Exercises.</h1>  
+ 
+1. List all customers with their company name, contact name, city, and country.<br>  
+2. List all products with product name and unit price.<br>  
+3. List all employees with first name, last name, title, and city.<br>  
+4. List all orders showing order id, customer id, employee id, and order date.<br>  
+5. List all suppliers with company name, city, and country.<br>  
+6. List all categories with category id and category name.<br>  
+7. List all shippers with company name and phone.<br>  
+8. List all territories with territory id and description.<br>  
+9. List all regions.<br>  
+10. List product names and quantities per unit.<br>  
+11. Find all customers located in Germany.<br>  
+12. Find all customers located in London.<br>  
+13. Find all products with unit price greater than 50.<br>  
+14. Find all products with unit price between 10 and 20.<br>  
+15. Find all discontinued products.<br>  
+16. Find all active products.<br>  
+17. Find all orders shipped to France.<br>  
+18. Find all orders with freight greater than 100.<br>  
+19. Find all suppliers from USA or Canada.<br>  
+20. Find all employees whose title contains Sales.<br>  
+21. Find all customers whose contact title is Owner.<br>  
+22. Find products with fewer than 10 units in stock.<br>  
+23. Find products with zero units on order.<br>  
+24. Find products that need reorder because stock is below reorder level.<br>  
+25. Find orders that have not been shipped yet.<br>  
+26. List products ordered by unit price from highest to lowest.<br>  
+27. List the 10 most expensive products.<br>  
+28. List the 10 cheapest products.<br>  
+29. List customers ordered by country then city.<br>  
+30. List employees ordered by last name and first name.<br>  
+31. List the most recent 20 orders.<br>  
+32. List the oldest 20 orders.<br>  
+33. List top 5 orders by freight cost.<br>  
+34. List suppliers ordered alphabetically by company name.<br>  
+35. List categories ordered by category name descending.<br>  
+36. List each order with the customer company name.<br>  
+37. List each order with employee full name.<br>  
+38. List each order with shipper company name.<br>  
+39. List order details with product name.<br>  
+40. List products with category name.<br>  
+41. List products with supplier company name.<br>  
+42. List products with category and supplier.<br>  
+43. List customers and their orders, including customers without orders.<br>  
+44. List employees and their territories.<br>  
+45. List territories with region descriptions.<br>  
+46. List orders with customer, employee, and shipper names.<br>  
+47. List order line items with customer and product names.<br>  
+48. List suppliers and their products, including suppliers with no products.<br>  
+49. List categories and products, including categories with no products.<br>  
+50. List employees and the name of the manager they report to.<br>  
+51. Count the total number of customers.<br>  
+52. Count the total number of products.<br>  
+53. Count the total number of orders.<br>  
+54. Find the average product unit price.<br>  
+55. Find the highest product unit price.<br>  
+56. Find the lowest product unit price.<br>  
+57. Find the total units in stock across all products.<br>  
+58. Count customers by country.<br>  
+59. Count suppliers by country.<br>  
+60. Count orders by ship country.<br>  
+61. Count products by category.<br>  
+62. Count products by supplier.<br>  
+63. Find total quantity sold by product.<br>  
+64. Find total quantity sold by category.<br>  
+65. Find total freight by shipper.<br>  
+66. Calculate line total for each order detail before discount.<br>  
+67. Calculate line total for each order detail after discount.<br>  
+68. Calculate total sales amount per order.<br>  
+69. Calculate total sales amount per customer.<br>  
+70. Calculate total sales amount per employee.<br>  
+71. Calculate total sales amount per category.<br>  
+72. Calculate total sales amount per supplier.<br>  
+73. Find the top 10 customers by total sales.<br>  
+74. Find the top 10 products by total sales.<br>  
+75. Find the top 5 employees by total sales.<br>  
+76. Find the average order value.<br>  
+77. Find orders with total sales greater than 10000.<br>  
+78. Find customers with total sales greater than 50000.<br>  
+79. Find the total discount amount per order.<br>  
+80. Find the total discount amount per customer.<br>  
+81. List orders placed in 1996.<br>  
+82. List orders placed in 1997.<br>  
+83. List orders placed in 1998.<br>  
+84. Count orders by year.<br>  
+85. Count orders by year and month.<br>  
+86. Calculate total sales by year.<br>  
+87. Calculate total sales by year and month.<br>  
+88. Find orders shipped later than required date.<br>  
+89. Calculate shipping delay days for each late order.<br>  
+90. Calculate average shipping time in days.<br>  
+91. Find orders shipped within 7 days.<br>  
+92. Find orders placed in December.<br>  
+93. Find orders placed in the first quarter of any year.<br>  
+94. Calculate total sales by quarter.<br>  
+95. Find the latest order date.<br>  
+96. Find products priced above the average product price.<br>  
+97. Find products priced below the average product price.<br>  
+98. Find customers who have placed at least one order.<br>  
+99. Find customers who have never placed an order.<br>  
+100. Find products that have never been ordered.<br>  
+101. Find employees who processed orders.<br>  
+102. Find suppliers who provide products above average price.<br>  
+103. Find orders whose freight is above average freight.<br>  
+104. Find products with stock greater than average stock.<br>  
+105. Find categories that contain discontinued products.<br>  
+106. Find countries with more than 5 customers.<br>  
+107. Find categories with more than 10 products.<br>  
+108. Find suppliers with at least 3 products.<br>  
+109. Find customers with more than 10 orders.<br>  
+110. Find employees with more than 50 orders.<br>  
+111. Find ship countries with total freight above 1000.<br>  
+112. Find products with total ordered quantity above 1000.<br>  
+113. Find categories with total sales above 100000.<br>  
+114. Find customers with average order value above 2000.<br>  
+115. Find years with total sales above 200000.<br>  
+116. Classify products as Expensive, Moderate, or Cheap by unit price.<br>  
+117. Classify products by stock status.<br>  
+118. Classify orders as late or on time.<br>  
+119. Classify customers by total sales level.<br>  
+120. Show order priority based on freight.<br>  
+121. List customers and total orders for customers in USA.<br>  
+122. Calculate total sales for customers in USA.<br>  
+123. List customers and total orders for customers in Germany.<br>  
+124. Calculate total sales for customers in Germany.<br>  
+125. List customers and total orders for customers in France.<br>  
+126. Calculate total sales for customers in France.<br>  
+127. List customers and total orders for customers in Brazil.<br>  
+128. Calculate total sales for customers in Brazil.<br>  
+129. List customers and total orders for customers in UK.<br>  
+130. Calculate total sales for customers in UK.<br>  
+131. List customers and total orders for customers in Mexico.<br>  
+132. Calculate total sales for customers in Mexico.<br>  
+133. List customers and total orders for customers in Spain.<br>  
+134. Calculate total sales for customers in Spain.<br>  
+135. List customers and total orders for customers in Italy.<br>  
+136. Calculate total sales for customers in Italy.<br>  
+137. List customers and total orders for customers in Canada.<br>  
+138. Calculate total sales for customers in Canada.<br>  
+139. List customers and total orders for customers in Sweden.<br>  
+140. Calculate total sales for customers in Sweden.<br>  
+141. List customers and total orders for customers in Argentina.<br>  
+142. Calculate total sales for customers in Argentina.<br>  
+143. List customers and total orders for customers in Austria.<br>  
+144. Calculate total sales for customers in Austria.<br>  
+145. List customers and total orders for customers in Belgium.<br>  
+146. Calculate total sales for customers in Belgium.<br>  
+147. List customers and total orders for customers in Denmark.<br>  
+148. Calculate total sales for customers in Denmark.<br>  
+149. List customers and total orders for customers in Finland.<br>  
+150. Calculate total sales for customers in Finland.<br>  
+151. List customers and total orders for customers in Ireland.<br>  
+152. Calculate total sales for customers in Ireland.<br>  
+153. List customers and total orders for customers in Norway.<br>  
+154. Calculate total sales for customers in Norway.<br>  
+155. List customers and total orders for customers in Poland.<br>  
+156. Calculate total sales for customers in Poland.<br>  
+157. List customers and total orders for customers in Portugal.<br>  
+158. Calculate total sales for customers in Portugal.<br>  
+159. List customers and total orders for customers in Switzerland.<br>  
+160. Calculate total sales for customers in Switzerland.<br>  
+161. List customers and total orders for customers in Venezuela.<br>  
+162. Calculate total sales for customers in Venezuela.<br>  
+163. Find top 10 products by sales in 1996.<br>  
+164. Find top 10 customers by sales in 1996.<br>  
+165. Count orders by employee in 1996.<br>  
+166. Calculate freight total by shipper in 1996.<br>  
+167. Find top 10 products by sales in 1997.<br>  
+168. Find top 10 customers by sales in 1997.<br>  
+169. Count orders by employee in 1997.<br>  
+170. Calculate freight total by shipper in 1997.<br>  
+171. Find top 10 products by sales in 1998.<br>  
+172. Find top 10 customers by sales in 1998.<br>  
+173. Count orders by employee in 1998.<br>  
+174. Calculate freight total by shipper in 1998.<br>  
+175. Calculate total sales for month 1 across all years.<br>  
+176. Count orders for month 1 across all years.<br>  
+177. Calculate total sales for month 2 across all years.<br>  
+178. Count orders for month 2 across all years.<br>  
+179. Calculate total sales for month 3 across all years.<br>  
+180. Count orders for month 3 across all years.<br>  
+181. Calculate total sales for month 4 across all years.<br>  
+182. Count orders for month 4 across all years.<br>  
+183. Calculate total sales for month 5 across all years.<br>  
+184. Count orders for month 5 across all years.<br>  
+185. Calculate total sales for month 6 across all years.<br>  
+186. Count orders for month 6 across all years.<br>  
+187. Calculate total sales for month 7 across all years.<br>  
+188. Count orders for month 7 across all years.<br>  
+189. Calculate total sales for month 8 across all years.<br>  
+190. Count orders for month 8 across all years.<br>  
+191. Calculate total sales for month 9 across all years.<br>  
+192. Count orders for month 9 across all years.<br>  
+193. Calculate total sales for month 10 across all years.<br>  
+194. Count orders for month 10 across all years.<br>  
+195. Calculate total sales for month 11 across all years.<br>  
+196. Count orders for month 11 across all years.<br>  
+197. Calculate total sales for month 12 across all years.<br>  
+198. Count orders for month 12 across all years.<br>  
+199. Rank products by total sales using RANK.<br>  
+200. Rank customers by total sales using DENSE_RANK.<br>  
+201. Show each order with running sales total by order date.<br>  
+202. Show monthly sales with previous month sales.<br>  
+203. Show monthly sales growth compared with previous month.<br>  
+204. Use a CTE to calculate total sales by customer.<br>  
+205. Use a CTE to find customers above average customer sales.<br>  
+206. Use a CTE to calculate product sales and return the top product.<br>  
+207. Use a CTE to identify late orders.<br>  
+208. Use a CTE to calculate order totals and include freight.<br>  
+209. Find the top product in each category by sales.<br>  
+210. Find the top customer in each country by sales.<br>  
+211. Find employees and their average order value.<br>  
+212. Find products with no current stock but previous sales.<br>  
+213. Find customers who ordered products from suppliers in Germany.<br>  
+214. Find orders containing more than 5 different products.<br>  
+215. Find products sold with an average discount greater than 10 percent.<br>  
+216. Find customers who received a discount on any order.<br>  
+217. Find employees who shipped orders late.<br>  
+218. Find the percentage of late orders.<br>  
+219. List products with unit price greater than 5.<br>  
+220. List orders with freight greater than 5.<br>  
+221. List products with units in stock less than 5.<br>  
+222. List products with unit price greater than 10.<br>  
+223. List orders with freight greater than 10.<br>  
+224. List products with units in stock less than 10.<br>  
+225. List products with unit price greater than 15.<br>  
+226. List orders with freight greater than 15.<br>  
+227. List products with units in stock less than 15.<br>  
+228. List products with unit price greater than 20.<br>  
+229. List orders with freight greater than 20.<br>  
+230. List products with units in stock less than 20.<br>  
+231. List products with unit price greater than 25.<br>  
+232. List orders with freight greater than 25.<br>  
+233. List products with units in stock less than 25.<br>  
+234. List products with unit price greater than 30.<br>  
+235. List orders with freight greater than 30.<br>  
+236. List products with units in stock less than 30.<br>  
+237. List products with unit price greater than 35.<br>  
+238. List orders with freight greater than 35.<br>  
+239. List products with units in stock less than 35.<br>  
+240. List products with unit price greater than 40.<br>  
+241. List orders with freight greater than 40.<br>  
+242. List products with units in stock less than 40.<br>  
+243. List products with unit price greater than 45.<br>  
+244. List orders with freight greater than 45.<br>  
+245. List products with units in stock less than 45.<br>  
+246. List products with unit price greater than 50.<br>  
+247. List orders with freight greater than 50.<br>  
+248. List products with units in stock less than 50.<br>  
+249. List products with unit price greater than 60.<br>  
+250. List orders with freight greater than 60.<br>  
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
