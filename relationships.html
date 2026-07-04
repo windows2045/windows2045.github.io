@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="All good here.">
+    <meta name="author" content="Victor">
+
+
+    <title> Packages to install.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	 
+</head>
+
+<body>
+<br>
+<div class="container">
+
+<h3> select @@SERVERNAME -- To find out the SQL Server name </h3>
+<h3> go </h3>
+
+<hr>
+<h3> select @@VERSION   -- To get information about the installed SQL Server </h3>
+<h3> go </h3>
+<hr>
+<h3> use Northwind </h3>
+<h3> go </h3>
+<hr>
+<h3> select name from sys.tables     -- To find out all the tables in the database </h3>
+<h3> go </h3>
+
+<hr>
+-- To find out the existing relationships between tables
+
+<h3> SELECT  </h3>
+    <h3> fk.name AS [FK_Constraint_Name], </h3>
+    <h3> OBJECT_NAME(fk.parent_object_id) AS [Child_Table], </h3>
+    <h3> c_parent.name AS [Child_Column], </h3>
+    <h3> OBJECT_NAME(fk.referenced_object_id) AS [Parent_Table], </h3>
+    <h3> c_referenced.name AS [Parent_Column] </h3>
+<h3> FROM  </h3>
+    <h3> sys.foreign_keys AS fk </h3>
+<h3> INNER JOIN  </h3>
+    <h3> sys.foreign_key_columns AS fkc ON fk.object_id = fkc.constraint_object_id </h3>
+<h3> INNER JOIN  </h3>
+    <h3> sys.columns AS c_parent ON fkc.parent_column_id = c_parent.column_id  </h3>
+    <h3> AND fkc.parent_object_id = c_parent.object_id </h3>
+<h3> INNER JOIN  </h3>
+    <h3> sys.columns AS c_referenced ON fkc.referenced_column_id = c_referenced.column_id  </h3>
+    <h3> AND fkc.referenced_object_id = c_referenced.object_id; </h3>
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
