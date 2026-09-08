@@ -1,0 +1,15 @@
+sqlite3 todo.db
+
+create table tasks (
+taskid integer primary key autoincrement,
+taskname text,
+category text,
+completed integer
+);
+
+insert into tasks (taskname,category,completed)
+values ('drink kion','health',0)
+
+delete from tasks
+where taskid = 1;
+
