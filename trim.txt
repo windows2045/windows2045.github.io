@@ -1,0 +1,24 @@
+# Prompt the user for the file path
+$inputFile = Read-Host -Prompt "Enter the full file path (or drag and drop the file here)"
+
+# Trim any accidental quotes added by dragging and dropping
+$inputFile = $inputFile.Trim("`"").Trim("'")
+
+# Check if the file exists
+if (Test-Path -Path $inputFile -PathType Leaf) {
+    # Get the file details
+    $file = Get-Item -Path $inputFile
+    
+    # Generate the new name without spaces
+    # Note: To replace spaces with underscores, use -replace ' ','_'
+    $newName = $file.Name -replace ' ',''
+    
+    if ($file.Name -ne $newName) {
+        Rename-Item -Path $file.FullName -NewName $newName
+        Write-Host "Successfully renamed to: $newName" -ForegroundColor Green
+    } else {
+        Write-Host "The file name already has no spaces." -ForegroundColor Yellow
+    }
+} else {
+    Write-Host "Error: File does not exist." -ForegroundColor Red
+}
