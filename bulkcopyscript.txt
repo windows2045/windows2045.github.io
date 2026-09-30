@@ -1,0 +1,9 @@
+BULK INSERT YourDestinationTable
+FROM 'C:\path\to\your\file.csv'
+WITH (
+    FORMAT = 'CSV',
+    FIRSTROW = 2,          -- 2 if your CSV has headers; 1 if it has no headers
+    FIELDTERMINATOR = ',', -- The character separating columns
+    ROWTERMINATOR = '\n',  -- The character separating rows (usually newline)
+    TABLOCK                -- Optional: Minimizes logging and locks the table for speed
+);
